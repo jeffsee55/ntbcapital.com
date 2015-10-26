@@ -51,7 +51,7 @@
 
           $(this).parent('.panel').css('margin-bottom', $(this).data('height'));
           //$("html, body").animate({ scrollTop: offset }, 500);
-        })
+        });
         $('.panel-collapse').on('hide.bs.collapse', function () {
           console.log("Hide");
           $(this).parent('.panel').css('margin-bottom', 0);
@@ -76,7 +76,7 @@
         });
         $('.close').on('click',function(){
           $('.collapse').collapse('hide');
-        })
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
