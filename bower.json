@@ -1,0 +1,22 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "modernizr": "2.8.2",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
+    "slick-carousel": "~1.5.8",
+    "parallax.js": "git@github.com:pixelcog/parallax.js.git#~1.3.2",
+    "scrollreveal": "scrollReveal.js#~2.3.2",
+    "fullpage.js": "~2.7.4"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "./modernizr.js"
+    }
+  }
+}

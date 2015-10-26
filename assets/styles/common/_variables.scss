@@ -1,0 +1,36 @@
+// Grid settings
+$enable-flex:           true;
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$gray:                  #666666;
+$light-gray:            #D8D8D8;
+$lightest-gray:         #F3F3F3;
+
+$brand-primary:         $gray;
+
+$base-font-family:      "Avenir Next";
+
+$base-border-radius:    0.15rem;
+
+$base-font-weight:      300;
+
+$btn-border-radius:     2px;
+
+
+@keyframes FLOAT {
+  0%   {
+    transform: translate(10px, 10px);
+  }
+  33% {
+    transform: translate(-10px, -10px);
+  }
+  66% {
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+

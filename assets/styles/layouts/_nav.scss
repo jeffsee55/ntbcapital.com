@@ -1,0 +1,231 @@
+header.navigation {
+
+  .row {
+    padding: 1rem 0;
+  }
+}
+
+header.banner {
+
+  nav.navbar {
+    a.brand {
+
+      @media(min-width: map-get($grid-breakpoints, sm)) {
+        float: left;
+      }
+    }
+
+    ul.navbar-nav {
+      float: left;
+
+      @media(min-width: map-get($grid-breakpoints, sm)) {
+        float: right;
+      }
+
+
+
+      li {
+        float: none;
+
+        @media(min-width: map-get($grid-breakpoints, sm)) {
+          float: left;
+        }
+
+        &.dropdown {
+          position: static;
+
+          ul.dropdown-menu {
+            right: 0;
+
+            & > div {
+              @include make-row();
+
+              li {
+                margin-left: 0;
+                padding-left: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#sublist {
+  &::after {
+    content: "<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>";
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+#mask {
+  position: fixed;
+  top: 0; right: 0; left: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  cursor: pointer;
+}
+
+.admin-bar .navlist {
+  top: 46px !important;
+}
+
+header.navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &.fixed-nav {
+    position: fixed;
+    top: 0;
+    background-color: white;
+  }
+
+
+  div.row {
+    align-items: center;
+  }
+
+  .nav-container {
+    margin: 0 auto;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    padding: 1.75rem 0;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0 auto;
+  }
+
+  .logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    @media(min-width: map-get($grid-breakpoints, md)) {
+      float: left;
+      display: inline-block;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+
+  .navlist {
+    left: -220px;
+    transition: all 0.3s ease-in-out;
+    padding-top: 2rem;
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      padding-top: 0;
+    }
+
+    float: left;
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 220px;
+    background-color: $gray-lighter;
+    z-index: 100;
+
+    &.show {
+      left: 0;
+    }
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      float: right;
+      position: static;
+      background: none;
+      width: auto;
+    }
+
+    & > li {
+      display: block;
+      float: none;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+
+        @media(max-width: map-get($grid-breakpoints, sm)) {
+          &:hover {
+            background-color: #D4D4D4;
+            text-decoration: none;
+          }
+        }
+
+        @media(max-width: map-get($grid-breakpoints, md)) {
+          padding: 10px 13px;
+        }
+
+        @media(min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) {
+          padding: 10px 20px;
+        }
+
+        &.has-more::after {
+          content: " #";
+        }
+      }
+
+      @media(min-width: map-get($grid-breakpoints, sm)) {
+        display: inline-block;
+        float: left;
+      }
+
+      .sublist {
+
+        @media(min-width: map-get($grid-breakpoints, sm)) {
+          position: absolute;
+          left: 0; right: 0;
+          background-color: $gray-lighter;
+          z-index: 100;
+          margin-top: 1rem;
+        }
+
+        .container {
+          background-color: #FFF;
+          padding: 0;
+
+          @media(min-width: map-get($grid-breakpoints, sm)) {
+            background-color: transparent;
+            padding-left: .9375rem;
+            padding-right: .9375rem;
+          }
+
+          @media(min-width: map-get($grid-breakpoints, lg)) {
+            max-width: 50rem;
+          }
+
+          ul {
+            padding: 0;
+
+            @media(min-width: map-get($grid-breakpoints, sm)) {
+              @include make-row;
+              padding: 3rem;
+            }
+            li {
+              padding: 0;
+
+              @media(min-width: map-get($grid-breakpoints, sm)) {
+                @include make-col-span(4);
+              }
+
+              a {
+                @media(min-width: map-get($grid-breakpoints, sm)) {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

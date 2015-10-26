@@ -1,0 +1,36 @@
+.article-card {
+  border: none;
+  margin-bottom: 2rem;
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  transition: all 400ms ease;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $gray;
+
+    .card-block {
+      padding: 1.25rem 0;
+      color: white;
+
+      .read-more {
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+
+  .card-img-top {
+    border-radius: 0px;
+  }
+
+  .card-block {
+    padding: 1.25rem 0;
+
+    .read-more {
+      text-transform: uppercase;
+      color: $gray;
+    }
+  }
+}

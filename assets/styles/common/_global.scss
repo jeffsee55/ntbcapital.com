@@ -1,0 +1,89 @@
+body {
+  font-family: $base-font-family;
+  color: $gray;
+}
+
+.wrap {
+  & > .content.row {
+    flex-direction: column;
+
+    .main {
+      margin-top: 76px;
+      padding: 0;
+    }
+  }
+}
+
+body.home .wrap .content .main {
+  margin-top: 0;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+button.close {
+  span {
+    font-weight: 100;
+    font-size: 65px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+.left-hr::after {
+  content: "";
+  width: 50%;
+  margin: 1rem 0;
+  max-width: 250px;
+  display: block;
+  height: 3px;
+  background-color: #BFBFBF;
+}
+
+.divider {
+  margin: 1rem 0;
+  text-align: center;
+  
+  span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: $light-gray;
+  }
+}
+
+.four-columns {
+  @media(min-width: map-get($grid-breakpoints, xs)) {
+    @include make-col-span(12);
+  }
+  @media(min-width: map-get($grid-breakpoints, sm)) {
+    @include make-col-span(4);
+  }
+  @media(min-width: map-get($grid-breakpoints, md)) {
+    @include make-col-span(3);
+  }
+}
+
+.three-columns {
+  @media(min-width: map-get($grid-breakpoints, xs)) {
+    @include make-col-span(12);
+  }
+  @media(min-width: map-get($grid-breakpoints, sm)) {
+    @include make-col-span(6);
+  }
+  @media(min-width: map-get($grid-breakpoints, md)) {
+    @include make-col-span(4);
+  }
+}
+
+
