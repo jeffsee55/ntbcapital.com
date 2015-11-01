@@ -1,9 +1,10 @@
-<form role="search" method="get" class="search-form form-inline" action="<?= esc_url(home_url('/')); ?>">
-  <label class="sr-only"><?php _e('Search for:', 'sage'); ?></label>
-  <div class="input-group">
-    <input type="search" value="<?= get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'sage'); ?> <?php bloginfo('name'); ?>" required>
-    <span class="input-group-btn">
-      <button type="submit" class="search-submit btn btn-default"><?php _e('Search', 'sage'); ?></button>
-    </span>
+<form role="search" method="get" class="pull-right form-inline" action="<?= esc_url(home_url('/')); ?>">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputAmount">Search</label>
+    <div class="input-group">
+      <div class="input-group-addon search-addon"><i class="material-icons">search</i></div>
+      <input type="text" class="search-input form-control" value="<?= get_search_query(); ?>" name="s" placeholder="<?php _e('Search', 'sage'); ?> <?php bloginfo('name'); ?>" required>
+    </div>
+    <input type="submit" class="sr-only form-control btn btn-default"></input>
   </div>
 </form>

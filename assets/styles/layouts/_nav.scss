@@ -169,8 +169,16 @@ header.navigation {
           padding: 10px 20px;
         }
 
-        &.has-more::after {
-          content: " #";
+        &:focus {
+          text-decoration: none;
+        }
+
+        i {
+          transition: all 200ms ease;
+
+          &.flip {
+            transform: rotate(180deg);
+          }
         }
       }
 

@@ -29,3 +29,4 @@ $columns = "";
   </div>
 
 </div>
+<?php get_template_part('templates/newsletter', 'signup'); ?>

@@ -18,19 +18,30 @@
     // All pages
     'common': {
       init: function() {
-          // scrollTo: Smooth scrolls to target id
-          function scrollTo(target) {
-            var offset;
-            var scrollSpeed = 600;
-            var wheight = $(window).height();
-            //var targetname = target;
-            //var windowheight = $(window).height();
-            //var pagecenterH = windowheight/2;
-            //var targetheight = document.getElementById(targetname).offsetHeight;
-            offset = $(target).offset().top;
+        $(".search-addon").click(function() {
+          $(this).siblings(".search-input").toggleClass("expand-search");
+        });
+        $("#sublist").on( 'show.bs.collapse', function() {
+          console.log("collapse");
+          $(this).siblings(".has-more").find("i").addClass("flip");
+        });
+        $("#sublist").on( 'hide.bs.collapse', function() {
+          console.log("hide");
+          $(this).siblings(".has-more").find("i").removeClass("flip");
+        });
+        // scrollTo: Smooth scrolls to target id
+        function scrollTo(target) {
+          var offset;
+          var scrollSpeed = 600;
+          var wheight = $(window).height();
+          //var targetname = target;
+          //var windowheight = $(window).height();
+          //var pagecenterH = windowheight/2;
+          //var targetheight = document.getElementById(targetname).offsetHeight;
+          offset = $(target).offset().top;
 
-            $('html, body').animate({scrollTop:offset}, scrollSpeed);
-          }
+          $('html, body').animate({scrollTop:offset}, scrollSpeed);
+        }
         $("a.team-member").click(function() {
           var index = $(this).data('index');
           var name = $(this).find('h4.team-member-name').text();
