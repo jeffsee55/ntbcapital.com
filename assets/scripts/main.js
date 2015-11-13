@@ -21,73 +21,6 @@
         $(".search-addon").click(function() {
           $(this).siblings(".search-input").toggleClass("expand-search");
         });
-        $("#sublist").on( 'show.bs.collapse', function() {
-          console.log("collapse");
-          $(this).siblings(".has-more").find("i").addClass("flip");
-        });
-        $("#sublist").on( 'hide.bs.collapse', function() {
-          console.log("hide");
-          $(this).siblings(".has-more").find("i").removeClass("flip");
-        });
-        // scrollTo: Smooth scrolls to target id
-        function scrollTo(target) {
-          var offset;
-          var scrollSpeed = 600;
-          var wheight = $(window).height();
-          //var targetname = target;
-          //var windowheight = $(window).height();
-          //var pagecenterH = windowheight/2;
-          //var targetheight = document.getElementById(targetname).offsetHeight;
-          offset = $(target).offset().top;
-
-          $('html, body').animate({scrollTop:offset}, scrollSpeed);
-        }
-        $("a.team-member").click(function() {
-          var index = $(this).data('index');
-          var name = $(this).find('h4.team-member-name').text();
-          var title = $(this).find('h6.team-member-title').text();
-          var bio = $(this).find('span.team-member-bio').text();
-          var avatar = $(this).find('img.team-member-avatar').attr('src');
-          $("#expanded-name-" + index).text(name);
-          $("#expanded-title-" + index).text(title);
-          $("#expanded-content-" + index).text(bio);
-          $("#expanded-avatar-" + index).attr('src', avatar);
-        });
-
-        $('.panel-collapse').on('show.bs.collapse', function () {
-          var expanded_height = $(this).find('.expanded-bio-content').height();
-          var offset = $(this).parent('.panel').offset().top;
-          $(this).attr("data-height", $(this).height());
-
-
-          $(this).parent('.panel').css('margin-bottom', $(this).data('height'));
-          //$("html, body").animate({ scrollTop: offset }, 500);
-        });
-        $('.panel-collapse').on('hide.bs.collapse', function () {
-          console.log("Hide");
-          $(this).parent('.panel').css('margin-bottom', 0);
-        });
-
-        // JavaScript to be fired on all pages
-        $('button.navbar-toggler').click(function() {
-          var nav = document.getElementById(this.dataset.target);
-          $("#menu-primary-navigation").addClass('show');
-          $("html").append("<div id='mask'></div>");
-
-          $('#mask').click(function(){
-            $("#menu-primary-navigation").removeClass('show');
-            $(this).remove();
-            console.log("clicked");
-          });
-        });
-
-        $(window).resize(function() {
-          $("#menu-primary-navigation").removeClass('show');
-          $("#mask").remove();
-        });
-        $('.close').on('click',function(){
-          $('.collapse').collapse('hide');
-        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -96,27 +29,9 @@
     // Home page
     'home': {
       init: function() {
-        var height = $(window).height();
-        $(".carousel-item .container").height(height);
-        var distance = $('.navigation').offset().top,
-        $window = $(window);
-
-        $window.scroll(function() {
-          if ( $window.scrollTop() >= distance ) {
-            $('.navigation').addClass('fixed-nav');
-          } else {
-            $('.navigation').removeClass('fixed-nav');
-          }
-        });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
       }
     }
   };

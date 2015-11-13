@@ -13,7 +13,7 @@ $columns = "";
 ?>
 
 <div class="container">
-  <div class="row">
+  <div class="row article-row">
     <?php while (have_posts()) : the_post(); ?>
     <?php if($index == 0 || $index == 1) {
         $columns = "6";

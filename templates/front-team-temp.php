@@ -25,7 +25,7 @@
           <?php foreach ( $array as $item) { ?>
             <div class="<?php echo $class; ?>">
               <a class="team-member" data-index="<?php echo $index; ?>" aria-expanded="false" aria-controls="collapseExample">
-                <img class="img-responsive img-circle center-block team-member-avatar" src="<?php echo $item['avatar']; ?>">
+                <img class="img-responsive center-block team-member-avatar" src="<?php echo $item['avatar']; ?>">
                 <h4 class="grid-heading team-member-name"><?php echo $item['name']; ?></h4>
                 <h6 class="grid-heading team-member-title"><?php echo $item['title']; ?></h6>
                 <span class="grid-heading team-member-bio sr-only"><?php echo $item['bio']; ?></h6>
@@ -34,7 +34,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-3 expanded-bio-avatar">
-                    <img class="img-responsive img-circle center-block" id="<?php echo 'expanded-avatar-' . $index; ?>" src="http://placehold.it/200x200">
+                    <img class="img-responsive center-block" id="<?php echo 'expanded-avatar-' . $index; ?>" src="http://placehold.it/200x200">
                     </div>
                     <div class="col-sm-9 expanded-bio-content">
                     <h2 id="<?php echo 'expanded-name-' . $index; ?>">John Doe</h2>

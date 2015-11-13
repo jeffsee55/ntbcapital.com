@@ -38,5 +38,8 @@
       <span class="icon-next" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+    <span id="slider-scroll" data-scroll="section2">
+      <i class="material-icons bounceIn">keyboard_arrow_down</i>
+    </span>
   </div>
 </section>

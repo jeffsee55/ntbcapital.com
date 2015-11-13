@@ -20,25 +20,23 @@ use Roots\Sage\Wrapper;
         get_template_part('templates/header');
       endif;
     ?>
-    <div class="wrap container-fluid" role="document">
-      <div class="content row">
+    <div class="wrap" role="document">
+      <div class="content">
         <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
+          <?php get_template_part('templates/footer'); ?>
         </main><!-- /.main -->
-        <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar" role="complementary">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
     <?php
       do_action('get_footer');
-      get_template_part('templates/footer');
       wp_footer();
     ?>
     <script>
-      window.sr = new scrollReveal();
+      var config = {
+        mobile: true
+      }
+      window.sr = new scrollReveal( config );
     </script>
   </body>
 </html>

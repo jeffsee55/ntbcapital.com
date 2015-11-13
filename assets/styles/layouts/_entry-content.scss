@@ -1,14 +1,14 @@
 .entry-content {
-  padding: 3rem 1rem 10rem;
+  padding: 3rem 1rem 3rem;
   max-width: 750px;
   margin: 0 auto;
 
   @media(min-width: map-get($grid-breakpoints, sm)) {
-    padding: 3rem 1rem 10rem;
+    padding: 3rem 1rem 3rem;
   }
 
   @media(min-width: map-get($grid-breakpoints, md)) {
-    padding: 3rem 0 10rem;
+    padding: 3rem 1rem 3rem;
   }
 }
 

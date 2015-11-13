@@ -47,7 +47,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
         $attributes .= ' ' . $attr . '="' . $value . '"';
       }
     }
-    if( $item->title == 'Contact' ) { 
+    if( $item->title == 'Contact' || $item->title == "Get in Touch" ) { 
       $attributes .=  "data-toggle='modal' data-target='.contact-modal'";
     }
     $item_output = $args->before;

@@ -7,8 +7,8 @@
     'walker'            => new wp_bootstrap_navwalker()
   ); ?>
 
-<?php if( !is_front_page() ) : $fixed = "fixed-nav"; endif; ?>
-<header class="navigation <?php echo $fixed; ?>">
+
+<header class="navigation <?php if( !is_front_page() ) : echo "fixed-nav"; endif; ?>">
 <div class="container-fluid">
   <button class="navbar-toggler hidden-sm-up" type="button" data-target="collapsingnavlist">
     &#9776;
@@ -33,7 +33,7 @@
         <span aria-hidden="true">&times;</span>
         <span class="sr-only">Close</span>
       </button>
-      <h1 class="header">Contact Us</h1>
+      <h1 class="header">Get in Touch</h1>
       <div class="row">
         <div class="col-sm-6">
           <strong>Lombok Office</strong><br>

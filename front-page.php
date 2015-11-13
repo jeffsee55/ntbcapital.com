@@ -1,8 +1,10 @@
 <?php
 
+$index = 0;
+
 if( have_rows('content') ):
 
-    while ( have_rows('content') ) : the_row();
+    while ( have_rows('content') ) : the_row(); $index++;
 
       if( get_row_layout() == 'slider' ): ?>
 
@@ -12,7 +14,7 @@ if( have_rows('content') ):
 
       <?php elseif( get_row_layout() == 'section' ): ?>
 
-        <div class="section">
+        <div class="section" id="<?php echo "section" . $index ?>">
 
           <h1><?php the_sub_field('title'); ?></h1>
 
@@ -24,7 +26,7 @@ if( have_rows('content') ):
 
       <?php elseif( get_row_layout() == 'plain_text_section' ): ?>
 
-        <div class="section plain-text-section">
+        <div class="section plain-text-section" id="<?php echo "section" . $index ?>">
 
           <h1><?php the_sub_field('title'); ?></h1>
 
@@ -41,7 +43,7 @@ if( have_rows('content') ):
 
       <?php elseif( get_row_layout() == 'quote' ): ?>
 
-        <div class="section quote-section"><blockquote><?php the_sub_field("quote_text"); ?></blockquote></div>
+        <div class="section quote-section" id="<?php echo "section" . $index ?>"><blockquote><?php the_sub_field("quote_text"); ?></blockquote></div>
 
       <?php elseif( get_row_layout() == 'grid' ): ?>
 

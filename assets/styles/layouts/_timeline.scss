@@ -1,21 +1,32 @@
 .timeline {
   position: relative;
 
+  $card-width: 250px;
+  $card-height: 200px;
+
   &::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 50.2%;
+    width: 50.09%;
     z-index: -10;
-    border-left: 3px dashed $gray;
+    border-left: 1px solid rgba(51, 51, 51, 0.4);
     margin-bottom: 1rem;
   }
 
   .article {
+    position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    & > div:last-child {
+      @media(max-width: map-get($grid-breakpoints, md)) {
+        margin-top: 3rem;
+      }
+    }
 
     @media(max-width: 767px) {
       .article-image {
@@ -30,16 +41,99 @@
       }
     }
 
-    .placeholder {
+    .article-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      span {
+      .img-container {
+        width: $card-width;
+        height: $card-height;
+        background-size: cover;
+        background-position: center;
+        border-radius: $border-radius;
+      }
+    }
+    .article-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .project-card {
+        margin-bottom: 0;
+        min-height: 0;
+        padding: 0.90rem 1rem;
+        max-width: $card-width;
+        min-height: $card-height;
+        /*border: none;*/
+
+        &.card-right {
+          h1 {
+            &::after {
+              float: right;
+              margin-left: 30%;
+            }
+          }
+
+          p {
+            float: right;
+            clear: right;
+            padding-top: 1.4rem;
+          }
+
+          &.card-left {
+            text-align: left;
+          }
+
+          &.card-right {
+            text-align: right;
+          }
+
+        }
+      }
+    }
+
+    .placeholder {
+      position: absolute;
+      top: 50%;
+      left: 49%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media(max-width: map-get($grid-breakpoints, md)) {
+        top: 39.5%;
+        left: 48.6%;
+      }
+
+      &.placeholder-right {
+        & > div {
+        }
+      }
+
+      &.placeholder-left {
+        & > div {
+        }
+      }
+
+      & > span {
         transition: all 200ms ease;
         display: block;
         height: 15px;
         width: 15px;
         background-color: $gray;
         border-radius: 50%;
-        margin: 0 auto;
+      }
+
+      .newsfeed-date {
+        position: relative;
+        text-align: center;
+        padding: 5px;
+
+        div:first-child {
+          font-size: 15px;
+          line-height: 1;
+        }
       }
     }
 

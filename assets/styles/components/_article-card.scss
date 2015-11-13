@@ -18,6 +18,7 @@
         text-transform: uppercase;
         color: white;
       }
+
     }
   }
 
@@ -27,6 +28,12 @@
 
   .card-block {
     padding: 1.25rem 0;
+
+    .card-text {
+      p {
+        text-align: justify;
+      }
+    }
 
     .read-more {
       text-transform: uppercase;

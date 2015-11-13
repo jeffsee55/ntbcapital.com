@@ -3,12 +3,24 @@ body {
   color: $gray;
 }
 
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus, *:focus {
+  outline: 0;
+}
+
+::selection {
+  background: $brand-primary;
+}
+::-moz-selection {
+  background: $brand-primary;
+}
+
+
 .material-icons {
   vertical-align: middle;
 }
 
 .wrap {
-  & > .content.row {
+  & > .content {
     flex-direction: column;
 
     .main {
@@ -32,9 +44,15 @@ img {
   letter-spacing: 1px;
 }
 button.close {
+  z-index: 1000;
   span {
     font-weight: 100;
     font-size: 65px;
+  }
+
+  &.bio-close {
+    top: 0rem;
+    right: 2rem;
   }
 }
 
@@ -42,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
   font-family: $base-header-font;
   text-transform: uppercase;
+
+  @media(max-width: map-get($grid-breakpoints, sm)) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .left-hr::after {
