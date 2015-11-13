@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   scrollToEl = function(element) {
     $("html, body").animate({scrollTop: element.offset().top}, 600);
-  }
+  };
 
   $("a.team-member").click(function() {
     var index = $(this).data('index');

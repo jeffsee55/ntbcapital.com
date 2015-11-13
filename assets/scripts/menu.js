@@ -11,7 +11,7 @@ $(document).ready(function(){
     $("html").removeClass('no-scroll');
     $("#mask").remove();
     console.log('remove fired');
-  }
+  };
   $('button.navbar-toggler').click(function() {
     var nav = document.getElementById(this.dataset.target);
     $("#menu-primary-navigation").addClass('show');
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
   $('#mask').click(function() {
     console.log('clicked mask');
-    removeMask()
+    removeMask();
   });
 
   $(window).resize(function() {
@@ -35,5 +35,5 @@ $(document).ready(function(){
   $('.menu-item a[href="/#section12"]').click(function() {
     $('.navigation .collapse').collapse('hide');
     removeMask();
-  })
+  });
 });
