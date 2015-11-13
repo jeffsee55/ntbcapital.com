@@ -1,3 +1,7 @@
+.newsfeed-container {
+  max-width: 45rem;
+}
+
 .timeline {
   position: relative;
 
@@ -22,22 +26,17 @@
     justify-content: center;
     margin-bottom: 2rem;
 
-    & > div:last-child {
-      @media(max-width: map-get($grid-breakpoints, md)) {
-        margin-top: 3rem;
-      }
-    }
-
     @media(max-width: 767px) {
       .article-image {
         order: 0;
       }
       .placeholder {
         order: 1;
-        margin: 2rem auto;
+        margin: 1rem auto;
       }
       .article-content {
         order: 2;
+        margin-bottom: 2rem;
       }
     }
 
@@ -94,25 +93,33 @@
     }
 
     .placeholder {
-      position: absolute;
-      top: 50%;
-      left: 49%;
       display: flex;
       align-items: center;
       justify-content: center;
+      top: 40%;
+      width: 100%;
+      position: relative;
 
-      @media(max-width: map-get($grid-breakpoints, md)) {
-        top: 39.5%;
-        left: 48.6%;
+      .newsfeed-date {
+        position: absolute;
+      }
+
+      @media(min-width: map-get($grid-breakpoints, md)) {
+        position: absolute;
+        width: auto;
       }
 
       &.placeholder-right {
-        & > div {
+        left: 18px;
+
+        @media(min-width: map-get($grid-breakpoints, md)) {
+          left: 48.9%;
         }
       }
-
       &.placeholder-left {
-        & > div {
+        left: -18px;
+        @media(min-width: map-get($grid-breakpoints, md)) {
+          left: 43.7%;
         }
       }
 

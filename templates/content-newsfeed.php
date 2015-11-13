@@ -2,7 +2,7 @@
   <div class="entry-content"><?php the_content(); ?></div>
 <?php endif; ?>
 
-<div class="container">
+<div class="newsfeed-container container">
   <?php if( have_rows( 'articles' ) ): ?>
     <div class="projects timeline">
       <?php $index = 0; ?>
