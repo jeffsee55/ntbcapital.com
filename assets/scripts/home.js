@@ -1,21 +1,13 @@
 $(document).ready(function() {
   var height = $(window).height();
   $(".carousel-item .container").height(height);
-  var distance = $('.navigation').offset().top;
-  $window = $(window);
+
   $("span#slider-scroll i").click(function() {
     $('html, body').animate(
       { scrollTop: $("#section2").offset().top},
       1500,
       "easeInOutQuad"
       );
-  });
-  $window.scroll(function() {
-    if ( $window.scrollTop() >= distance ) {
-      $('.navigation').addClass('fixed-nav');
-    } else {
-      $('.navigation').removeClass('fixed-nav');
-    }
   });
 
   scrollToEl = function(element) {

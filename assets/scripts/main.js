@@ -29,6 +29,15 @@
     // Home page
     'home': {
       init: function() {
+        var distance = $('.navigation').offset().top;
+        $window = $(window);
+        $window.scroll(function() {
+          if ( $window.scrollTop() >= distance ) {
+            $('.navigation').addClass('fixed-nav');
+          } else {
+            $('.navigation').removeClass('fixed-nav');
+          }
+        });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

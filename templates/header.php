@@ -35,7 +35,7 @@
       </button>
       <h1 class="header">Get in Touch</h1>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
           <strong>Lombok Office</strong><br>
           Jalan Pariwisata Kuta<br>
           Kuta - Pujut, Lombok Tengah<br>
@@ -44,7 +44,7 @@
           (in front of Segare Anak Bungalows & Restaurant)<br>
           <em>Please note this is not a postal address</em>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5">
           <strong>Bali Office</strong><br>
           JaIan Raya Semat<br>
           Gang Giri Sunia<br>
@@ -57,36 +57,36 @@
       </div>
       <hr>
       <div class="row">
-        <label class="col-sm-4"><strong>General Inquiries</strong></label>
-        <div class="col-sm-6">
+        <label class="col-sm-7"><strong>General Inquiries</strong></label>
+        <div class="col-sm-5">
           info@ntbcapital.com<br>
           +62 (370) 6158 033
         </div>
       </div>
       <div class="row">
-        <label class="col-sm-4"><strong>Investment | Sales & Marketing Inquires</strong></label>
-        <div class="col-sm-6">
+        <label class="col-sm-7"><strong>Investment | Sales & Marketing Inquires</strong></label>
+        <div class="col-sm-5">
           chris@ntbcapital.com<br>
           Chris Berney +62 (0) 821 4633 0111 +61 (0) 405 081 088 (Australia) +852 6909 7525 (Hong Kong)
         </div>
       </div>
       <div class="row">
-        <label class="col-sm-4"><strong>Investment Inquires</strong></label>
-        <div class="col-sm-6">
+        <label class="col-sm-7"><strong>Investment Inquires</strong></label>
+        <div class="col-sm-5">
           simon@ntbcapital.com
           Simon Barnes +852 6053 5031 (Hong Kong)
         </div>
       </div>
       <div class="row">
-        <label class="col-sm-4"><strong>Community Relations | Press & Media Inquires</strong></label>
-        <div class="col-sm-6">
+        <label class="col-sm-7"><strong>Community Relations | Press & Media Inquires</strong></label>
+        <div class="col-sm-5">
           tamara@ntbcapital.com
           Tamara Cox +62 (0) 821 4424 8722
         </div>
       </div>
       <div class="row">
-        <label class="col-sm-4"><strong>Accounts | Local Inquires (Bahasa)</strong></label>
-        <div class="col-sm-6">
+        <label class="col-sm-7"><strong>Accounts | Local Inquires (Bahasa)</strong></label>
+        <div class="col-sm-5">
           kartini@ntbcapital.com
           Kartini L Raja +62 (0) 813 1949 0943 
         </div>

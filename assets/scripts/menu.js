@@ -10,7 +10,6 @@ $(document).ready(function(){
     $("#menu-primary-navigation").removeClass('show');
     $("html").removeClass('no-scroll');
     $("#mask").remove();
-    console.log('remove fired');
   };
   $('button.navbar-toggler').click(function() {
     var nav = document.getElementById(this.dataset.target);
@@ -20,7 +19,6 @@ $(document).ready(function(){
   });
 
   $('#mask').click(function() {
-    console.log('clicked mask');
     removeMask();
   });
 
