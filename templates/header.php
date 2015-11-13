@@ -7,23 +7,23 @@
     'walker'            => new wp_bootstrap_navwalker()
   ); ?>
 
-
 <header class="navigation <?php if( !is_front_page() ) : echo "fixed-nav"; endif; ?>">
-<div class="container-fluid">
-  <button class="navbar-toggler hidden-sm-up" type="button" data-target="collapsingnavlist">
-    &#9776;
-  </button>
-  <div class="row">
-    <?php get_template_part('templates/logo'); ?>
-    <div class="nav-container">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu( $args );
-        endif;
-      ?>
+  <div id="mask"></div>
+  <div class="container-fluid">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-target="collapsingnavlist">
+      &#9776;
+    </button>
+    <div class="row">
+      <?php get_template_part('templates/logo'); ?>
+      <div class="nav-container">
+        <?php
+          if (has_nav_menu('primary_navigation')) :
+            wp_nav_menu( $args );
+          endif;
+        ?>
+      </div>
     </div>
   </div>
-</div>
 </header>
 
 <div class="modal fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

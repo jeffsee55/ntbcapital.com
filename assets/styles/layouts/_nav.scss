@@ -73,10 +73,14 @@ header.banner {
 
 #mask {
   position: fixed;
-  top: 0; right: 0; left: 0; bottom: 0;
+  top: 0; left: 0; right: 100%; bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 500;
+  z-index: 1500;
   cursor: pointer;
+
+  &.on {
+    right: 0;
+  }
 }
 
 .no-scroll {
@@ -141,26 +145,25 @@ header.navigation {
     left: -220px;
     transition: all 0.3s ease-in-out;
     padding-top: 2rem;
-    @media(min-width: map-get($grid-breakpoints, sm)) {
-      padding-top: 0;
-    }
-
     float: left;
     position: fixed;
     top: 0; bottom: 0;
     width: 220px;
     background-color: $gray-lighter;
-    z-index: 100;
+    z-index: 2000;
 
-    &.show {
-      left: 0;
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      padding-top: 0;
     }
-
     @media(min-width: map-get($grid-breakpoints, sm)) {
       float: right;
       position: static;
       background: none;
       width: auto;
+    }
+
+    &.show {
+      left: 0;
     }
 
     & > li {

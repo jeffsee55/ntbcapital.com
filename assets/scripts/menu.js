@@ -9,13 +9,13 @@ $(document).ready(function(){
   removeMask = function() {
     $("#menu-primary-navigation").removeClass('show');
     $("html").removeClass('no-scroll');
-    $("#mask").remove();
+    $("#mask").removeClass("on");
   };
+
   $('button.navbar-toggler').click(function() {
     var nav = document.getElementById(this.dataset.target);
     $("#menu-primary-navigation").addClass('show');
-    $("html").append("<div id='mask'></div>");
-    $("html").addClass('no-scroll');
+    $("#mask").addClass("on");
   });
 
   $('#mask').click(function() {
