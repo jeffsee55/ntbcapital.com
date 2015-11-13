@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   removeMask = function() {
     $("#menu-primary-navigation").removeClass('show');
-    $("html").removeClass('no-scroll');
+    $("body").removeClass('no-scroll');
     $("#mask").removeClass("on");
   };
 
