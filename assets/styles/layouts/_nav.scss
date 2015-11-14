@@ -63,12 +63,19 @@ header.banner {
 }
 
 #sublist {
-  &::after {
-    content: "<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>";
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+  .close {
+    visibility: hidden;
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      visibility: visible;
+    }
   }
+  /*&::after {*/
+    /*content: "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>";*/
+    /*position: absolute;*/
+    /*top: 2rem;*/
+    /*right: 2rem;*/
+  /*}*/
 }
 
 #mask {

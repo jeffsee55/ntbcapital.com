@@ -22,10 +22,16 @@ $(document).ready(function(){
     removeMask();
   });
 
-  $(window).resize(function() {
-    $("#menu-primary-navigation").removeClass('show');
-    $("#mask").remove();
-  });
+  // Detect resize only on horizontal for responsive purposes
+  // Mobile screens will resize vertically when browser nav disappears
+  //var windowWidth = $(window).width();
+  //$(window).resize(function() {
+    //if(this !== windowWidth) {
+      //$("#menu-primary-navigation").removeClass('show');
+      //removeMask();
+    //}
+  //});
+
   $('.close').on('click',function(){
     $('.navigation .collapse').collapse('hide');
   });

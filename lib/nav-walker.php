@@ -3,7 +3,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
-    $output .= "\n$indent<div id=\"sublist\" class=\" sublist collapse\">\n<div class=\"container\"><ul> ";
+    $output .= "\n$indent<div id=\"sublist\" class=\" sublist collapse\">\n<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button><div class=\"container\"><ul> ";
 	}
 
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
