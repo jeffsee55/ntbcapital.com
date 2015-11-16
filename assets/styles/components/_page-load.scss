@@ -217,7 +217,17 @@ body.home .loaded .ip-logo svg path {
 
 // fake it to not appear at first site
 .no-js .ip-header .ip-logo svg path {
-	fill: $lightest-gray;
+  fill: $lightest-gray;
+}
+
+.no-js .ip-header .ip-logo svg text {
+  fill: $lightest-gray;
+  stroke: $lightest-gray;
+}
+
+.no-js .ip-header .ip-logo svg polygon {
+  fill: $lightest-gray;
+  stroke: $lightest-gray;
 }
 
 /* Media queries */
