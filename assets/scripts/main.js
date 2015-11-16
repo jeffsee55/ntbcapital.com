@@ -35,6 +35,7 @@
           if ( $window.scrollTop() >= distance ) {
             $('.navigation').addClass('fixed-nav');
           } else {
+            console.log("Distance" + distance + "; ScrollTop" + $window.scrollTop() + ".");
             $('.navigation').removeClass('fixed-nav');
           }
         });

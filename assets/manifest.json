@@ -4,7 +4,10 @@
       "files": [
         "scripts/main.js",
         "scripts/menu.js",
-        "scripts/home.js"
+        "scripts/home.js",
+        "scripts/classie.js",
+        "scripts/pathLoader.js",
+        "scripts/mainLoad.js"
       ],
       "main": true
     },
