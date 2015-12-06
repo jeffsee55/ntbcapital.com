@@ -3,7 +3,7 @@
     $counter_index = 0;
     $slide_index = 0;
   ?>
-  <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+  <div id="carousel-slider" class="carousel slide" data-ride="">
     <ol class="carousel-indicators">
       <?php while( have_rows( 'slide_item' ) ) : the_row();
         if($counter_index == 0) {
@@ -22,7 +22,7 @@
         } else {
           $slide_class = "";
         }; ?>
-        <div class="carousel-item <?php echo $slide_class; ?>" style="background-image: url(<?php echo the_sub_field('image'); ?>)">
+        <div class="carousel-item <?php echo $slide_class; ?>">
           <div class="container">
             <div class="carousel-content"><?php the_sub_field('caption'); ?></div>
           </div>

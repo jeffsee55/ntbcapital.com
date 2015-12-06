@@ -35,8 +35,9 @@
 .ip-logo {
 	top: 0;
 	height: 100%;
-	-webkit-transform: translate3d(0,25%,0);
-	transform: translate3d(0,25%,0);
+	-webkit-transform: translate3d(0,0%,0);
+	transform: translate3d(0,0,0);
+  visibility: hidden;
 }
 
 .ip-loader {
@@ -60,7 +61,6 @@
 
 .ip-header .ip-loader svg path {
 	fill: none;
-	stroke-width: 6;
 }
 
 .ip-header .ip-loader svg path.ip-loader-circlebg {

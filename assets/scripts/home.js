@@ -1,6 +1,17 @@
 $(document).ready(function() {
   var height = $(window).height();
-  $(".carousel-item .container").height(height);
+  var carousel = $(".carousel-item .container").height(height);
+
+  var distance = carousel.height();
+
+  console.log(distance);
+  $(window).scroll(function() {
+    if ( $(this).scrollTop() >= distance ) {
+      $('.navigation').addClass('fixed-nav');
+    } else {
+      $('.navigation').removeClass('fixed-nav');
+    }
+  });
 
   $("span#slider-scroll i").click(function() {
     $('html, body').animate(

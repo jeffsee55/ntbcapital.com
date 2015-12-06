@@ -13,10 +13,13 @@
 	var support = { animations : Modernizr.cssanimations },
 		container = document.getElementById( 'ip-container' ),
 		header = container.querySelector( 'header.ip-header' ),
-		loader = new PathLoader( document.getElementById( 'ip-loader-circle' ) ),
+    loader = new PathLoader( document.getElementById( 'ip-loader-circle' ) ),
 		animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
 		// animation end event name
 		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
+
+  // show the logo once js is loaded
+  $(".ip-logo").css("visibility", "visible");
 
 	function init() {
 		var onEndInitialAnimation = function() {
@@ -52,12 +55,16 @@
 
           // Remove static placeholder
           $(".ip-loader-static").remove();
+  
 
 					// reached the end
 					if( progress === 1 ) {
 						classie.remove( container, 'loading' );
 						classie.add( container, 'loaded' );
 						clearInterval( interval );
+
+            // start the slider
+            $('#carousel-slider').carousel();
 
 						var onEndHeaderAnimation = function(ev) {
 							if( support.animations ) {
@@ -79,7 +86,7 @@
 				}, 80 );
 		};
 
-		loader.setProgressFn( simulationFn );
+    loader.setProgressFn( simulationFn );
 	}
 	
 	function noscroll() {
