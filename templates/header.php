@@ -43,17 +43,17 @@
         <div class="col-sm-4 text-center">
           <p>For investment inquiries<br>Contact Chris</p>
           <a href="#">+1 2345 6789</a>
-          <a class="btn btn-primary"href="#">Email Chris</a>
+          <a class="btn btn-primary btn-block"href="#">Email Chris</a>
         </div>
         <div class="col-sm-4 text-center">
           <p>For account inquiries<br>Contact David</p>
           <a href="#">+1 2345 6789</a>
-          <a class="btn btn-primary"href="#">Email David</a>
+          <a class="btn btn-primary btn-block"href="#">Email David</a>
         </div>
         <div class="col-sm-4 text-center">
           <p>For general inquiries<br>Contact us</p>
           <a href="#">+1 2345 6789</a>
-          <a class="btn btn-primary"href="#">Email Us</a>
+          <a class="btn btn-primary btn-block"href="#">Email Us</a>
         </div>
       </div>
     </div>
