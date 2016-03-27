@@ -8,6 +8,7 @@
   <img class="card-img-top" src="<?php echo $thumb_url ?>" alt="">
   <div class="card-block">
     <h2 class="entry-title"><?php the_title(); ?></h2>
+    <hr>
     <div class="card-text entry-summary">
       <?php the_excerpt(); ?>
     </div>

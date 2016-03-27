@@ -48,3 +48,4 @@ $(document).ready(function() {
     $(this).parent('.panel').css('margin-bottom', 0);
   });
 });
+

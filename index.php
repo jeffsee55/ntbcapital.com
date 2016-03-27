@@ -12,7 +12,7 @@ $index = 0;
 $columns = "";
 ?>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row article-row">
     <?php while (have_posts()) : the_post(); ?>
     <?php if($index == 0 || $index == 1) {

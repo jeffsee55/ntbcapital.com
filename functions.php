@@ -19,6 +19,7 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
   'lib/nav-walker.php',            // Bootstrap Nav
+  'lib/rest.php',                  // REST api
 ];
 
 foreach ($sage_includes as $file) {

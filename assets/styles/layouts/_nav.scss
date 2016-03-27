@@ -1,4 +1,5 @@
 header.navigation {
+  border-bottom: 1px solid #F9F9F9;
 
   .container-fluid {
     @media(max-width: map-get($grid-breakpoints, sm)) {
@@ -6,7 +7,7 @@ header.navigation {
 
     button.navbar-toggler {
       position: absolute;
-      padding: 2rem 1rem;
+      padding: 1.5rem 0;
     }
   }
   .row {
@@ -94,7 +95,7 @@ header.banner {
   overflow: hidden;
 }
 
-.admin-bar .navlist {
+body.admin-bar .navlist {
   top: 46px !important;
 }
 
@@ -103,6 +104,7 @@ header.navigation {
   left: 0;
   right: 0;
   z-index: 1000;
+  border-bottom: 1px solid #E9E7E7;
 
   &.fixed-nav {
     position: fixed;
@@ -113,10 +115,19 @@ header.navigation {
 
   div.row {
     align-items: center;
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      padding-bottom: 0;
+      padding-top: 0.5rem;
+    }
   }
 
   .nav-container {
     margin: 0 auto;
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      margin: 0 auto 8px;
+    }
   }
 
   ul {
@@ -130,7 +141,7 @@ header.navigation {
     display: block;
     margin: 0 auto;
     text-align: center;
-    background-size: 190px 35px;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../images/logo-navy.png);
@@ -140,7 +151,7 @@ header.navigation {
     @media(min-width: map-get($grid-breakpoints, md)) {
       float: left;
       display: inline-block;
-      margin: 0 auto;
+      margin: 0 auto 10px;
       width: 250px;
       background-size: contain;
     }
@@ -184,12 +195,41 @@ header.navigation {
       float: none;
 
       & > a {
+        @media(min-width: map-get($grid-breakpoints, sm)) {
+          &:hover, &:focus {
+            text-decoration: none;
+            background-color: #F9F9F9;
+          }
+        }
+
+        /*@media(max-width: map-get($grid-breakpoints, sm)) {*/
+          /*&:before{*/
+            /*content: "";*/
+            /*background: url(../images/icons/tools.png);*/
+            /*height: 20px;*/
+            /*width: 20px;*/
+            /*display: inline-block;*/
+            /*background-size: contain;*/
+            /*margin-right: 10px;*/
+            /*vertical-align: top;*/
+          /*}*/
+        /*}*/
       }
 
       a {
         display: block;
         padding: 10px 20px;
+        font-family: $nav-font;
+        text-transform: uppercase;
+        font-size: 0.8rem;
 
+        @media(min-width: map-get($grid-breakpoints, sm)) {
+          font-size: 1rem;
+
+          &:hover, &:focus {
+            text-decoration: none;
+          }
+        }
         @media(max-width: map-get($grid-breakpoints, sm)) {
           &:hover {
             background-color: #D4D4D4;
@@ -197,12 +237,13 @@ header.navigation {
           }
         }
 
-        @media(max-width: map-get($grid-breakpoints, md)) {
-          padding: 10px 13px;
+        @media(min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, md)) {
+          padding: 10px 8px;
+          font-size: 0.8em;
         }
 
         @media(min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) {
-          padding: 10px 20px;
+          padding: 10px 18px;
         }
 
         &:focus {
@@ -230,7 +271,7 @@ header.navigation {
           left: 0; right: 0;
           background-color: $gray-lighter;
           z-index: 100;
-          margin-top: 1rem;
+          margin-top: 9px;
         }
 
         .container {
@@ -278,3 +319,6 @@ header.navigation {
   }
 }
 
+body.admin-bar header.navigation.fixed-nav {
+  top: 32px;
+}

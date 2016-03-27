@@ -7,18 +7,16 @@ $sidebar-sm-columns:    4;
 $gray:                  #666666;
 $light-gray:            #D8D8D8;
 $lightest-gray:         #F3F3F3;
+$navy:                  #232433;
 
-$brand-primary:         #32363F;
-$brand-secondary:       #E2B183;
+$brand-primary:         $navy;
+$brand-secondary:       $navy;
 
 $secondary-gradient:    linear-gradient(-180deg, #B19579 0%, #8F6845 100%);
 
-$base-font-family:      "Avenir Next";
-$base-header-font:      "Baskerville";
-
 $base-border-radius:    0.15rem;
 
-$base-font-weight:      300;
+$base-font-weight:      100;
 
 $btn-border-radius:     2px;
 

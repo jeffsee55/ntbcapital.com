@@ -1,5 +1,4 @@
 .slider-section {
-
   .carousel-indicators {
     left: auto;
     right: 2rem;
@@ -30,11 +29,10 @@
   }
 
   .carousel-item {
-    background-image: url(../images/home-bg.png);
-    /*min-height: 300px;*/
+    min-height: 300px;
     background-size: cover;
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
+    background-position: center;
+    background-repeat: no-repeat;
 
     @media(min-width: map-get($grid-breakpoints, md)) {
       /*min-height: 500px;*/
@@ -68,9 +66,8 @@
       padding: 5rem 2rem;
 
       h1, h2, h3, h4, h5, h6 {
+        /*@extend .accent-font;*/
         color: white;
-        text-transform: uppercase;
-        font-weight: normal;
 
         @media(min-width: map-get($grid-breakpoints, md)) {
           font-size: 4rem;
@@ -82,6 +79,7 @@
 
 .section {
   padding: 8rem 0;
+  background-color: #FDFDFD;
 
   h1 {
     text-align: center;
@@ -105,16 +103,26 @@
 .grid-section {
   
   .grid-item {
-    padding: 3em;
+    padding: 2em;
     flex-grow: 1;
+    transition: all 0.5s ease;
+
+    @media(min-width: map-get($grid-breakpoints, lg)) {
+      padding: 3em;
+    }
 
     h4 {
-      text-align: center;
-      text-transform: uppercase;
+      @extend .accent-font;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
     }
 
     p {
-      text-align: justify;
+      @media(min-width: map-get($grid-breakpoints, lg)) {
+        text-align: justify;
+      }
     }
   }
 }
@@ -177,12 +185,13 @@
     .grid-heading {
       text-align: center;
     }
-    h4, h6 {
-      text-transform: uppercase;
+    h4 {
+      color: $gray;
     }
     h6 {
+      @extend .thin-font;
       color: transparentize($gray, 0.4);
-      font-weight: bold;
+      font-weight: normal;
     }
   }
 
@@ -218,9 +227,9 @@
       width: 100%;
 
       h2 {
+        @extend .accent-font;
         display: none;
-        text-transform: uppercase;
-        font-weight: 400;
+
         @media(min-width: map-get($grid-breakpoints, md)) {
           display: block;
         }
@@ -230,9 +239,11 @@
 }
 
 .quote-section {
-  background-color: $light-gray;
+  background: $navy url(../images/home-bg.png);
   padding: 5rem 0;
   position: relative;
+  color: white;
+  @extend .accent-font;
 
   &::before {
     content: "";

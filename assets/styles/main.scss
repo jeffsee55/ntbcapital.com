@@ -6,9 +6,27 @@
 @import "../../bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
-/*@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,400italic);*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,400italic);
+
+@font-face {
+  font-family: "Butler";
+  src: url("../fonts/Butler_Black.otf")
+}
+/*@font-face {*/
+  /*font-family: "Didot";*/
+  /*src: url("../fonts/Didot.ttf")*/
+/*}*/
+@font-face {
+  font-family: "Didot";
+  src: url("../Didot_LT_Std_Bold.otf")
+}
+@font-face {
+  font-family: "Ambroise";
+  src: url("../ambroise.otf")
+}
 
 @import "common/_global";
+@import "common/_typography";
 @import "components/_buttons";
 @import "components/_comments";
 @import "components/_forms";

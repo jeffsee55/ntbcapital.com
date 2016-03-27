@@ -11,7 +11,7 @@ use Roots\Sage\Wrapper;
   <body <?php body_class(); ?>>
 		<div id="ip-container" class="ip-container">
       <?php if(is_front_page()) : ?>
-        <?php get_template_part('templates/front-loader'); ?>
+      <!-- This is where front loader goes -->
       <?php endif; ?>
         <!--[if lt IE 9]>
           <div class="alert alert-warning">

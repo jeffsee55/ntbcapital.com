@@ -19,7 +19,7 @@
         <?php while ( have_rows('grid_item') ) : the_row(); ?>
           <div class="<?php echo $class; ?>">
             <h4><?php the_sub_field('grid_title'); ?></h4>
-            <p><?php the_sub_field('grid_content'); ?></p>
+            <?php the_sub_field('grid_content'); ?>
           </div>
         <?php endwhile; ?>
       </div>

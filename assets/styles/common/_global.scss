@@ -1,17 +1,14 @@
-body {
-  font-family: $base-font-family;
-  color: $gray;
-}
-
 .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus, *:focus {
   outline: 0;
 }
 
 ::selection {
-  background: $brand-primary;
+  background: #AD8A5F;
+  color: #FFF;
 }
 ::-moz-selection {
-  background: $brand-primary;
+  background: #AD8A5F;
+  color: #FFF;
 }
 
 
@@ -24,8 +21,15 @@ body {
     flex-direction: column;
 
     .main {
-      margin-top: 76px;
+      margin-top: 70px;
       padding: 0;
+
+      @media(min-width: map-get($grid-breakpoints, md)) {
+        margin-top: 120px;
+      }
+      @media(min-width: map-get($grid-breakpoints, lg)) {
+        margin-top: 70px;
+      }
     }
   }
 }
@@ -43,27 +47,20 @@ img {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-button.close {
-  z-index: 1000;
+button.close { z-index: 1000;
   span {
     font-weight: 100;
-    font-size: 65px;
+    font-size: 40px;
+    font-family: "Lato";
+
+    @media(min-width: map-get($grid-breakpoints, sm)) {
+      font-size: 65px;
+    }
   }
 
   &.bio-close {
-    top: 0rem;
+    top: 0.5rem;
     right: 2rem;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
-  font-family: $base-header-font;
-  text-transform: uppercase;
-
-  @media(max-width: map-get($grid-breakpoints, sm)) {
-    padding-left: 5px;
-    padding-right: 5px;
   }
 }
 

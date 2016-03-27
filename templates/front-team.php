@@ -32,7 +32,7 @@
                   <img class="img-responsive center-block team-member-avatar" src="/wp-content/uploads/2015/11/account-box.jpg">
                 <?php } ?>
                 <h4 class="grid-heading team-member-name"><?php echo $item['name']; ?></h4>
-                <h6 class="grid-heading team-member-title"><?php echo $item['title']; ?></h6>
+                <h6 class="grid-heading team-member-title accent-font capitalize"><?php echo $item['title']; ?></h6>
                 <span class="grid-heading team-member-bio sr-only"><?php echo $item['bio']; ?></h6>
               </a>
             </div>
@@ -54,7 +54,7 @@
                       <div class="col-md-9 col-sm-12 expanded-bio-content">
                         <h2 id="<?php echo 'expanded-name-' . $index; ?>">John Doe</h2>
                         <hr class="hidden-md-down">
-                        <h6 id="<?php echo 'expanded-title-' . $index; ?>">Job Title</h6>
+                        <h6 class="accent-font capitalize" id="<?php echo 'expanded-title-' . $index; ?>">Job Title</h6>
                         <p id="<?php echo 'expanded-content-' . $index; ?>">Blah, blah, blah</p>
                       </div>
                     </div>

@@ -1,3 +1,23 @@
+<div class="section plain-text-section" id="section11">
+
+  <h1>Sign Up For Our Newsletter</h1>
+
+  <div class="divider" style="visibility: visible; ">
+    <span style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s; transition: transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></span>
+    <span style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s; transition: transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></span>
+    <span style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s; transition: transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></span>
+  </div>
+
+  <div class="section-content">
+    <form class="form-inline" style="text-align: center">   
+      <div class="form-group">       
+        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">   
+      </div>   
+      <button type="submit" class="btn btn-primary-outline">Subscribe</button> 
+  </form>
+</div>
+
+</div>
 <footer class="content-info" role="contentinfo">
   <div class="container-fluid">
     <div class="row">

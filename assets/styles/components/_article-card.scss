@@ -1,5 +1,5 @@
 .article-card {
-  border: none;
+  border: 1px solid #ECECEC;
   margin-bottom: 2rem;
   display: block;
   text-decoration: none;
@@ -8,11 +8,15 @@
 
   &:hover {
     text-decoration: none;
-    background-color: $gray;
+    background-color: $brand-secondary;
 
     .card-block {
       padding: 1.25rem 0;
       color: white;
+
+      hr {
+        border-color: #FFF;
+      }
 
       .read-more {
         text-transform: uppercase;
@@ -29,8 +33,13 @@
   .card-block {
     padding: 1.25rem 0;
 
+    h2.entry-title {
+      font-size: 1.5rem;
+    }
+
     .card-text {
       p {
+        font-size: 0.8rem;
         text-align: justify;
       }
     }
