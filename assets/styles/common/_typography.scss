@@ -52,7 +52,16 @@ body {
     font-size: 80px;
   }
 }
+@media(max-width: map-get($grid-breakpoints, sm)) {
+  .logo-text {
+    line-height: 0.7;
 
+    span.logo-secondary {
+      display: block;
+      font-size: 50px;
+    }
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
@@ -133,10 +142,11 @@ h1.header {
 
 /* Header fonts with hero image background */
 .page-header.hero h1.header {
-  letter-spacing: 1rem;
+  letter-spacing: 0.4rem;
   color: #FFF;
 
   @media(min-width: map-get($grid-breakpoints, sm)) {
+    letter-spacing: 1rem;
     margin-bottom: 5rem;
   }
 }
