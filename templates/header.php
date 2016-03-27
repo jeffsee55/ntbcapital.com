@@ -35,6 +35,7 @@
       <h1 class="header">Get in Touch</h1>
       <div class="map-container">
         <div id="map">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/indo.jpg">
         </div>
       </div>
       <h2 class="text-center">Inquiries</h2>
