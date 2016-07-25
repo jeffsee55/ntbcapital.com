@@ -5,7 +5,7 @@
   <?php wp_head(); ?>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
-    [data-sr] {
+    .scroll-reveal {
       visibility: hidden;
     }
   </style>

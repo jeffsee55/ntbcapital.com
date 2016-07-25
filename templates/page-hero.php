@@ -14,7 +14,7 @@
 
 
 <div class="page-header hero" data-parallax="scroll" data-image-src="<?php echo $thumb_url; ?>" style="background-size: <?php echo $bg_size ?>">
-  <div data-sr="wait 0.2s">
+  <div class="scroll-reveal">
     <h1 class="header"><?= Titles\title(); ?></h1>
   </div>
 </div>

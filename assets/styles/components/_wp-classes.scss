@@ -29,7 +29,7 @@
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
+  /*@extend .thumbnail;*/
 }
 .wp-caption-text {
   padding: $thumbnail-padding;

@@ -39,7 +39,9 @@ if( have_rows('content') ):
 
       <?php elseif( get_row_layout() == 'image' ): ?>
 
-        <div class="image-section parallax-window" data-parallax="scroll" data-image-src="<?php the_sub_field('image'); ?>"></div>
+        <?php $image_url = get_sub_field( 'image' )['sizes']['large'];?>
+
+        <div class="image-section parallax-window" data-parallax="scroll" data-image-src="<?php echo $image_url; ?>"></div>
 
       <?php elseif( get_row_layout() == 'quote' ): ?>
 

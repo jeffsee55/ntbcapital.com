@@ -38,10 +38,7 @@ use Roots\Sage\Wrapper;
         ?>
     </div>
     <script>
-      var config = {
-        mobile: true
-      }
-      window.sr = new scrollReveal( config );
+      window.sr = ScrollReveal();
     </script>
   </body>
 </html>

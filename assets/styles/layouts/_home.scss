@@ -52,25 +52,29 @@
       display: flex;
       z-index: 20;
       position: relative;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
 
       @media(min-width: map-get($grid-breakpoints, md)) {
         min-height: 500px;
-        align-items: flex-end;
         justify-content: flex-start;
       }
     }
 
     .carousel-content {
-      padding: 5rem 2rem;
+      padding: 5rem 1rem;
+      width: 100%;
+
+      @media(min-width: map-get($grid-breakpoints, md)) {
+        padding: 5rem 2rem;
+      }
 
       h1, h2, h3, h4, h5, h6 {
-        /*@extend .accent-font;*/
         color: white;
+        font-size: 3rem;
 
         @media(min-width: map-get($grid-breakpoints, md)) {
-          font-size: 4rem;
+          font-size: 5rem;
         }
       }
     }
@@ -87,7 +91,7 @@
   }
 
   .section-content {
-    @extend .center-block;
+    @extend .m-x-auto;
     text-align: justify;
     width: 700px;
     max-width: 90%;
@@ -95,7 +99,7 @@
 }
 
 .image-section {
-  height: 400px;
+  height: 300px;
   background-size: cover;
   background-position: center;
 }
@@ -289,7 +293,7 @@
   }
 
   blockquote {
-    @extend .center-block;
+    @extend .m-x-auto;
     max-width: 90%;
     /*width: 700px;*/
     /*font-size: 2rem;*/

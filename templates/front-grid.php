@@ -1,4 +1,4 @@
-<div class="section grid-section">
+<section class="section grid-section">
 
   <?php $count = count( get_sub_field('grid_item') ); ?>
 
@@ -25,4 +25,4 @@
       </div>
     </div>
   <?php endif; ?>
-</div>
+</section>

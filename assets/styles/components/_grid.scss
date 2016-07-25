@@ -1,6 +1,6 @@
 // Grid system
 .main {
-  @include make-col();
+  @include make-col-span(12);
 
   @include media-breakpoint-up(sm) {
     @include make-col-span($main-sm-columns);
@@ -10,7 +10,7 @@
   }
 }
 .sidebar {
-  @include make-col();
+  @include make-col-span(12);
 
   @include media-breakpoint-up(sm) {
     @include make-col-span($sidebar-sm-columns);

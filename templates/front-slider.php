@@ -3,7 +3,7 @@
     $counter_index = 0;
     $slide_index = 0;
   ?>
-  <div id="carousel-slider" class="carousel slide" data-ride="">
+  <div id="carousel-slider" class="carousel slide" data-ride="carousel" data-wrap="true">
     <ol class="carousel-indicators">
       <?php while( have_rows( 'slide_item' ) ) : the_row();
         if($counter_index == 0) {
@@ -22,8 +22,9 @@
         } else {
           $slide_class = "";
         }; ?>
-        <?php if( !empty( get_sub_field('image') ) ) : ?>
-          <div class="carousel-item <?php echo $slide_class; ?>" style="background-image: url(<?php the_sub_field('image'); ?>)">
+        <?php if( !empty( get_sub_field('image') ) ) :
+        ?>
+          <div class="carousel-item <?php echo $slide_class; ?>" style="background-image: url(<?php echo get_sub_field( 'image' )['sizes']['large'];?>)">
         <?php else : ?>
           <div class="carousel-item <?php echo $slide_class; ?>">
         <?php endif; ?>
@@ -42,5 +43,6 @@
       <span class="icon-next" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+    <span id="slider-scroll"><img src="<?php echo get_template_directory_uri() . '/dist/images/arrow-down.png'; ?>"></span>
   </div>
 </section>

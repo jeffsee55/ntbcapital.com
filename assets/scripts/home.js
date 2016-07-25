@@ -4,7 +4,6 @@ $(document).ready(function() {
 
   var distance = carousel.height();
 
-  console.log(distance);
   $(window).scroll(function() {
     if ( $(this).scrollTop() >= distance ) {
       $('.navigation').addClass('fixed-nav');
@@ -13,9 +12,10 @@ $(document).ready(function() {
     }
   });
 
-  $("span#slider-scroll i").click(function() {
+  $("span#slider-scroll img").click(function() {
+    var height = $('.slider-section').height();
     $('html, body').animate(
-      { scrollTop: $("#section2").offset().top},
+      { scrollTop: height },
       1500,
       "easeInOutQuad"
       );

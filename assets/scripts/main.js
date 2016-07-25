@@ -22,6 +22,7 @@
         $(".search-addon").click(function() {
           $(this).siblings(".search-input").toggleClass("expand-search");
         });
+        sr.reveal('.scroll-reveal', { origin: 'bottom', duration: 2000, delay: 200 });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
