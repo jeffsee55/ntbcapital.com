@@ -30,8 +30,8 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 // Custom excerpt length
-function customer_excerpt_length( $length ) {
+function custom_excerpt_length( $length ) {
 	return 15;
 }
-add_filter( 'excerpt_length', __NAMESPACE__.'\\customer_excerpt_length', 999 );
+add_filter( 'excerpt_length', __NAMESPACE__.'\\custom_excerpt_length', 999 );
 

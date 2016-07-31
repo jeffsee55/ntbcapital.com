@@ -2,7 +2,10 @@
   $thumb_id = get_post_thumbnail_id();
   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
   $thumb_url = $thumb_url_array[0];
-}; ?>
+} else {
+  $thumb_url = get_theme_mod( 'site_image' );
+}
+?>
 
 <a class="card article-card" href="<?php the_permalink(); ?>">
   <img class="card-img-top" src="<?php echo $thumb_url ?>" alt="">

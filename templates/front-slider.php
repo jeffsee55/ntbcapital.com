@@ -2,6 +2,11 @@
   <?php
     $counter_index = 0;
     $slide_index = 0;
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+    echo '<div class="logo-container center"><img src="' . $image[0] . '"></div>';
   ?>
   <div id="carousel-slider" class="carousel slide" data-ride="carousel" data-wrap="true">
     <ol class="carousel-indicators">

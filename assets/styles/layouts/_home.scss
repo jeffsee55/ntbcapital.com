@@ -1,4 +1,30 @@
 .slider-section {
+
+  .logo-container {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    text-align: right;
+    
+
+    &.center {
+
+      @media(min-width: map-get($grid-breakpoints, md)) {
+        img {
+          width: 300px;
+          margin: 3rem;
+        }
+      }
+    }
+
+    & > img {
+      display: block;
+      width: 180px;
+      margin: 1rem;
+      transition: all 1s ease;
+    }
+  }
+
   .carousel-indicators {
     left: auto;
     right: 2rem;
@@ -9,7 +35,7 @@
     li {
       margin: 0 3px;
       border-width: 2px;
-      transition: all 500ms ease;
+      transition: all 300ms ease;
 
       &.active {
         height: 10px;
@@ -34,16 +60,11 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-width: map-get($grid-breakpoints, md)) {
-      /*min-height: 500px;*/
-    }
-
     &::after {
       content: "";
       position: absolute;
       top: 0; right: 0; left: 0; bottom: 0;
       z-index: 10;
-      /*background-image: radial-gradient(75% 104%, rgba( 0, 0, 0, 0.30) 50%, #000000 100%);*/
     }
 
 
@@ -69,8 +90,12 @@
         padding: 5rem 2rem;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1, h2, h3, h4, h5, h6, p {
         color: white;
+        text-shadow: 0px 1px 10px #333;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
         font-size: 3rem;
 
         @media(min-width: map-get($grid-breakpoints, md)) {
@@ -183,7 +208,6 @@
     img {
       width: 10rem;
       margin-bottom: 1rem;
-      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
       transition: all 200ms ease;
     }
     .grid-heading {
@@ -218,8 +242,9 @@
     .expanded-bio-avatar {
       display: none;
       align-items: center;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
       @media(min-width: map-get($grid-breakpoints, md)) {
         display: flex;
       }
@@ -243,7 +268,7 @@
 }
 
 .quote-section {
-  background: $navy url(../images/home-bg.png);
+  background-color: $navy;
   padding: 5rem 0;
   position: relative;
   color: white;

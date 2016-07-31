@@ -29,7 +29,7 @@
                 <?php if( !isset( $item['avatar'] ) ) { ?>
                   <img class="img-responsive center-block team-member-avatar" src="<?php echo $item['avatar']; ?>">
                 <?php } else { ?>
-                  <img class="img-responsive center-block team-member-avatar" src="/wp-content/uploads/2015/11/account-box.jpg">
+                  <img class="img-responsive center-block team-member-avatar" src="<?php echo get_template_directory_uri() . '/dist/images/ntb-avatar.png'; ?>">
                 <?php } ?>
                 <h4 class="grid-heading team-member-name"><?php echo $item['name']; ?></h4>
                 <h6 class="grid-heading team-member-title accent-font capitalize"><?php echo $item['title']; ?></h6>
@@ -48,7 +48,7 @@
                       <?php if( !isset( $item['avatar'] ) ) { ?>
                         <div class="col-md-3 expanded-bio-avatar" style="background-image: url(<?php echo $item['avatar']; ?>)">
                       <?php } else { ?>
-                        <div class="col-md-3 expanded-bio-avatar" style="background-image: url(/wp-content/uploads/2015/11/account-box.jpg)">
+                        <div class="col-md-3 expanded-bio-avatar" style="background-image: url(<?php echo get_template_directory_uri() . '/dist/images/ntb-avatar.png'; ?>)">
                       <?php } ?>
                       </div>
                       <div class="col-md-9 col-sm-12 expanded-bio-content">

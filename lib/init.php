@@ -28,6 +28,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  // Add theme logo
+  add_theme_support( 'custom-logo' );
+
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
   //add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
@@ -37,7 +40,8 @@ function setup() {
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list']);
 
   // Tell the TinyMCE editor to use a custom stylesheet
-  add_editor_style(Assets\asset_path('styles/editor-style.css'));
+  //add_editor_style(Assets\asset_path('styles/editor-style.css'));
+
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
@@ -62,5 +66,52 @@ function widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);
+
+  register_sidebar([
+    'name'          => __('Footer Right', 'sage'),
+    'id'            => 'footer-right',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+  ]);
+
+  register_sidebar([
+    'name'          => __('Footer Left', 'sage'),
+    'id'            => 'footer-left',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+  ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+
+function ntb_customize_register($wp_customize){
+
+  $wp_customize->add_section(
+    'site_images', 
+    array(
+      'title' => __('Site Images', 'ntb'),
+    )
+  );
+
+  $wp_customize->add_setting(
+    'site_image'
+  );
+
+  $wp_customize->add_control( new \WP_Customize_Image_Control($wp_customize, 'site_image', array(
+    'label'    => __('Site Image', 'ntb'),
+    'section'  => 'site_images',
+    'settings' => 'site_image',
+  )));
+
+  $wp_customize->add_setting(
+    'navbar_logo'
+  );
+
+  $wp_customize->add_control( new \WP_Customize_Image_Control($wp_customize, 'navbar_logo', array(
+    'label'    => __('Navbar Logo', 'ntb'),
+    'section'  => 'site_images',
+    'settings' => 'navbar_logo',
+  )));
+ 
+}
+ 
+add_action('customize_register', __NAMESPACE__ . '\\ntb_customize_register');

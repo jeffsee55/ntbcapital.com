@@ -14,7 +14,7 @@
             </div>
             <div data-sr="scale up 50%, reset" class="placeholder placeholder-right">
               <span></span>
-              <div class="newsfeed-date"><div><div>21</div>July</div></div>
+              <div class="newsfeed-date"><div><div><?php echo date( 'd' ); ?></div><?php echo 'Jul'; ?></div></div>
             </div>
             <div data-sr="enter right, move 150px" class="article-content col-md-6">
               <a class="card project-card card-right"  href="<?php echo the_sub_field( 'link' ); ?>">

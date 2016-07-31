@@ -144,7 +144,6 @@ header.navigation {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../images/logo-navy.png);
     width: 100%;
     height: 50px;
 
@@ -300,11 +299,6 @@ header.navigation {
 
               @media(min-width: map-get($grid-breakpoints, sm)) {
                 @include make-col-span(6);
-
-                /*just until we fill out the rest of the items*/
-                &:last-child {
-                  @include make-col-offset(6);
-                }
               }
 
               a {

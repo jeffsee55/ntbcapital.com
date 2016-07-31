@@ -15,6 +15,17 @@
         <?php $timing+=0.1; ?>
       <?php endwhile; ?>
     </div>
+  <?php elseif( have_rows( 'charities' ) ) : ?>
+    <div class="row projects">
+      <?php while( have_rows ( 'charities' ) ) : the_row(); ?>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <a class="card project-card" href="<?php echo the_sub_field( 'link' ); ?>" style="background-image: url(<?php echo the_sub_field('image'); ?>)">
+            <h1><?php the_sub_field('name'); ?></h1>
+            <p><?php the_sub_field('description'); ?></p>
+            <span>Learn More</span>
+          </a>
+        </div>
+      <?php endwhile; ?>
+    </div>
   <?php endif; ?>
 </div>
-

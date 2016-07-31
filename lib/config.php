@@ -57,7 +57,8 @@ function display_sidebar() {
         'is_home',
         'is_page',
         'is_single',
-        ['is_page_template', 'template-custom.php']
+        ['is_page_template', 'template-flex.php'],
+        ['is_page_template', 'template-card.php']
       ]
     );
 

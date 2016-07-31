@@ -3,26 +3,28 @@ footer.content-info {
   padding: 2rem;
 
   .footer-right {
-    display: flex;
-    align-items: flex-end;
-  }
+    text-align: right;
+    justify-content: flex-end;
 
-  ul.social-icons {
-    width: 100%;
-    margin-bottom: 0;
-    padding-left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    ul {
+      width: 100%;
+      margin-bottom: 0;
+      padding-left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    li {
-      list-style: none;
+      li {
+        margin-left: 1rem;
+        list-style: none;
 
-      a {
-        text-decoration: none;
+        a {
+          text-decoration: none;
+        }
       }
     }
   }
+
 
   .bottom-footer{
     border-top: 1px solid $light-gray;

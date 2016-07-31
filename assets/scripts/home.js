@@ -1,8 +1,17 @@
 $(document).ready(function() {
   var height = $(window).height();
   var carousel = $(".carousel-item .container").height(height);
-
   var distance = carousel.height();
+
+  var slides = $( '.carousel-inner' ).children().length;
+  $('#carousel-slider').on('slide.bs.carousel', function () {
+    var currentIndex = $(this).find('.carousel-item.active').index() + 1;
+    if( currentIndex !== slides ) {
+      $('.logo-container').removeClass('center');
+    } else {
+      $('.logo-container').addClass('center');
+    }
+  });
 
   $(window).scroll(function() {
     if ( $(this).scrollTop() >= distance ) {
@@ -16,8 +25,8 @@ $(document).ready(function() {
     var height = $('.slider-section').height();
     $('html, body').animate(
       { scrollTop: height },
-      1500,
-      "easeInOutQuad"
+      1000,
+      "swing"
       );
   });
 
