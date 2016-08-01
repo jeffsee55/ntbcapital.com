@@ -17,7 +17,7 @@
           'tag__in' => array($first_tag),
           'post__not_in' => array($post->ID),
           'posts_per_page'=>5,
-          'caller_get_posts'=>1
+          'ignore_sticky_posts'=>1
           );
           $my_query = new WP_Query($args);
           if( $my_query->have_posts() ) { ?>
@@ -35,5 +35,3 @@
     </article>
   <?php endwhile; ?>
 </div>
-
-<?php get_template_part('templates/newsletter', 'signup'); ?>

@@ -21,6 +21,19 @@
             wp_nav_menu( $args );
           endif;
         ?>
+        <div class="profile-link dropdown">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </span>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <?php if( is_user_logged_in() ) : ?>
+                <a class="dropdown-item" href="/profile">Profile</a>
+                <a class="dropdown-item" href="">Sign out</a>
+              <?php else : ?>
+                <a class="dropdown-item" href="/sign-in">Sign in</a>
+                <a class="dropdown-item" href="/">Become an investor</a>
+              <?php endif; ?>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -38,22 +51,24 @@
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/indo.jpg">
         </div>
       </div>
-      <h2 class="text-center">Inquiries</h2>
-      <div class="row">
-        <div class="col-sm-4 text-center">
-          <p>For investment inquiries<br>Contact Chris</p>
-          <a href="#">+1 2345 6789</a>
-          <a class="btn btn-primary btn-block"href="#">Email Chris</a>
-        </div>
-        <div class="col-sm-4 text-center">
-          <p>For account inquiries<br>Contact David</p>
-          <a href="#">+1 2345 6789</a>
-          <a class="btn btn-primary btn-block"href="#">Email David</a>
-        </div>
-        <div class="col-sm-4 text-center">
-          <p>For general inquiries<br>Contact us</p>
-          <a href="#">+1 2345 6789</a>
-          <a class="btn btn-primary btn-block"href="#">Email Us</a>
+      <div class="text-container">
+        <h2 class="text-center">Inquiries</h2>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <p>For investment inquiries<br>Contact Chris</p>
+            <a href="#">+1 2345 6789</a>
+            <a class="btn btn-primary btn-block"href="#">Email Chris</a>
+          </div>
+          <div class="col-sm-4 text-center">
+            <p>For account inquiries<br>Contact David</p>
+            <a href="#">+1 2345 6789</a>
+            <a class="btn btn-primary btn-block"href="#">Email David</a>
+          </div>
+          <div class="col-sm-4 text-center">
+            <p>For general inquiries<br>Contact us</p>
+            <a href="#">+1 2345 6789</a>
+            <a class="btn btn-primary btn-block"href="#">Email Us</a>
+          </div>
         </div>
       </div>
     </div>

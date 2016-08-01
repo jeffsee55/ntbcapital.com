@@ -1,7 +1,7 @@
 /* Font styles */
-$base-font-family:      "Gotham Book";
+$base-font-family:      "Bliss Pro";
 $nav-font:              $base-font-family;
-$base-header-font:      "Lato";
+$base-header-font:      "Garamond";
 
 body {
   font-family: $base-font-family;
@@ -29,43 +29,18 @@ body {
 }
 
 .accent-font {
-  font-family: "Butler";
-  font-weight: bold;
-  @extend .normalcase;
+  font-family: $base-font-family;
 }
 
 .thin-font {
-  font-family: "Lato";
+  font-family: $base-font-family;
   text-transform: uppercase;
   font-weight: 100;
 }
 
-.logo-text {
-  font-size: 120px !important;
-  text-transform: none;
-  font-family: 'Butler';
-  font-weight: bold;
-  span.logo-secondary {
-    font-family: 'Lato';
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: 80px;
-  }
-}
-@media(max-width: map-get($grid-breakpoints, sm)) {
-  .logo-text {
-    line-height: 0.7;
-
-    span.logo-secondary {
-      display: block;
-      font-size: 50px;
-    }
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
-  font-family: $base-header-font;
+  font-family: $base-font-family;
   text-transform: uppercase;
 }
 
@@ -88,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
+  font-family: $base-header-font;
   width: 80%;
   text-align: center;
   font-size: 2em;

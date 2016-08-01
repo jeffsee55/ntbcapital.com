@@ -23,6 +23,9 @@
           $(this).siblings(".search-input").toggleClass("expand-search");
         });
         sr.reveal('.scroll-reveal', { origin: 'bottom', duration: 2000, delay: 200 });
+        $('.loader').fadeOut(800, function(){ 
+          $(this).remove(); 
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
