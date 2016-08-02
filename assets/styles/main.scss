@@ -6,23 +6,13 @@
 @import "../../bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,400italic);
-
 @font-face {
-  font-family: "Butler";
-  src: url("../fonts/Butler_Black.otf")
-}
-/*@font-face {*/
-  /*font-family: "Didot";*/
-  /*src: url("../fonts/Didot.ttf")*/
-/*}*/
-@font-face {
-  font-family: "Didot";
-  src: url("../Didot_LT_Std_Bold.otf")
+  font-family: "Garamond";
+  src: url("../fonts/Garamond.TTF")
 }
 @font-face {
-  font-family: "Ambroise";
-  src: url("../ambroise.otf")
+  font-family: "BlissPro";
+  src: url("../fonts/BlissPro-Medium_1.otf")
 }
 
 @import "common/_global";
