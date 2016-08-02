@@ -8,11 +8,12 @@
 
 @font-face {
   font-family: "Garamond";
-  src: url("../fonts/Garamond.TTF")
+  src: url("dist/fonts/Garamond.TTF")
 }
+
 @font-face {
   font-family: "BlissPro";
-  src: url("../fonts/BlissPro-Medium_1.otf")
+  src: url("dist/fonts/BlissPro-Medium_1.otf")
 }
 
 @import "common/_global";
