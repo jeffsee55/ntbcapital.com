@@ -6,15 +6,7 @@
 @import "../../bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
-@font-face {
-  font-family: "Garamond";
-  src: url("dist/fonts/Garamond.TTF")
-}
-
-@font-face {
-  font-family: "BlissPro";
-  src: url("dist/fonts/BlissPro-Medium_1.otf")
-}
+@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans';
 
 @import "common/_global";
 @import "common/_typography";
