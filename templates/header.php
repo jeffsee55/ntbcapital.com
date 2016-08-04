@@ -26,10 +26,10 @@
             </span>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
               <?php if( is_user_logged_in() ) : ?>
-                <a class="dropdown-item" href="/profile">Profile</a>
-                <a class="dropdown-item" href="">Sign out</a>
+                <a class="profile-signin-link dropdown-item" href="/profile">Profile</a>
+                <a class="dropdown-item" href="/wp-admin/admin-post.php?action=ss_signout&data=<?php echo get_current_user_id(); ?>">Sign out</a>
               <?php else : ?>
-                <a class="dropdown-item" href="/sign-in">Sign in</a>
+                <a class="profile-signin-link dropdown-item" href="/profile">Sign in</a>
                 <a class="dropdown-item" href="/">Become an investor</a>
               <?php endif; ?>
             </div>
